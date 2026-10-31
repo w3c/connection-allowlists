@@ -2,10 +2,10 @@
 Title: Connection Allowlists
 Shortname: connection-allowlists
 Level: 1
-Status: CG-DRAFT
-Group: WICG
-Repository: wicg/connection-allowlists
-URL: https://wicg.github.io/connection-allowlists/
+Status: ED
+Group: webappsec
+Repository: w3c/connection-allowlists
+URL: https://w3c.github.io/connection-allowlists/
 Editor: Noam Rosenthal, Google
 Editor: Mike West, Google
 Abstract:
