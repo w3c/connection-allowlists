@@ -456,10 +456,13 @@ a [=/host=] (|host|), an [=environment=] (|environment|), and a [=list=] of
  
     1.  If |host| [$match host|host-matches$] |connection allowlist|, [=continue=].
 
-    2.  [$report|Report a violation$] given |host|, |environment|, and
-        |connection allowlist|.
+    2.  Let |synthetic url| be the result of [=URL parser|parsing=] the concatenation of
+        `"https://"` and the result of [=host serializer|serializing=] |host|.
 
-    3.  If |connection allowlist|'s [=Connection Allowlist/disposition=] is
+    3.  If |synthetic url| is not failure, [$report|report a violation$] given |synthetic url|,
+        |environment|, and |connection allowlist|.
+
+    4.  If |connection allowlist|'s [=Connection Allowlist/disposition=] is
         <a grammar for="Connection Allowlist/disposition">enforce</a>, return [=blocked=].
 
 2.  Return [=allowed=].
